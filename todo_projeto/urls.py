@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.listar_tarefas, name='listar_tarefas'),
     path('<int:pk>/', views.visualizar_tarefa, name='visualizar_tarefa'),
+    path('criar/', views.criar_tarefa, name='criar_tarefa'),
+    path('editar/<int:pk>/', views.editar_tarefa, name='editar_tarefa'),
+    path('excluir/<int:pk>/', views.excluir_tarefa, name='excluir_tarefa'),
 ]
