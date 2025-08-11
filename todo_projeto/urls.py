@@ -19,4 +19,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+     path('', views.listar_tarefas, name='listar_tarefas'),
+
+    path('<int:pk>/', views.visualizar_tarefa, name='visualizar_tarefa'),
 ]
